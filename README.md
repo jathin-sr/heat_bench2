@@ -1,11 +1,10 @@
-# heatKernel
-HeatKernel: Performance Engineering of a Finite Difference Stencil Kernel
+# heatKernel: Performance Engineering of a Finite Difference Stencil Kernel
 
 ![heatKernel](results/archive/results_20251127_222556/performance_plots/complete_optimization_journey.png)
 
 ---
 
-**Updates** This project is in continuous state and more stages will be added based on my learnings
+**Updates**: This project is in continuous state and more stages will be added based on my learnings
 
 ---
 
@@ -16,12 +15,12 @@ This project benchmarks and optimizes a **2D heat equation finite-difference ste
 
 **Governing PDE:**
 ```
-∂u/∂t = α ( ∂²u/∂x² + ∂²u/∂y² )
+∂u/∂t = α (∂²u/∂x² + ∂²u/∂y²)
 ```
 
 **Discretization (5-point stencil):**
 ```
-u(i,j)^{n+1} = u(i,j)^n + αΔt * ( (u(i+1,j)+u(i-1,j)+u(i,j+1)+u(i,j-1)−4u(i,j)) / Δx² )
+u(i,j)^{n+1} = u(i,j)^n + αΔt * ((u(i+1,j) + u(i-1,j) + u(i,j+1) + u(i,j-1) − 4*u(i,j)) / Δx²)
 ```
 
 **Stability Criterion:**
