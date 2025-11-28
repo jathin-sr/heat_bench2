@@ -1,7 +1,7 @@
 # heatKernel
 HeatKernel: Performance Engineering of a Finite Difference Stencil Kernel
 
-!(results/archive/results_20251127_222556/performance_plots/complete_optimization_journey.png)
+![heatKernel](results/archive/results_20251127_222556/performance_plots/complete_optimization_journey.png)
 
 ---
 
@@ -15,13 +15,19 @@ This project benchmarks and optimizes a **2D heat equation finite-difference ste
 ## Mathematical Model
 
 **Governing PDE:**
-```∂u/∂t = α ( ∂²u/∂x² + ∂²u/∂y² )```
+```
+∂u/∂t = α ( ∂²u/∂x² + ∂²u/∂y² )
+```
 
 **Discretization (5-point stencil):**
-```u(i,j)^{n+1} = u(i,j)^n + αΔt * ( (u(i+1,j)+u(i-1,j)+u(i,j+1)+u(i,j-1)−4u(i,j)) / Δx² )```
+```
+u(i,j)^{n+1} = u(i,j)^n + αΔt * ( (u(i+1,j)+u(i-1,j)+u(i,j+1)+u(i,j-1)−4u(i,j)) / Δx² )
+```
 
 **Stability Criterion:**
-`Δt ≤ Δx² / (4α)`
+```
+Δt ≤ Δx² / (4α)
+```
 
 ## Repository Layout
 ```text
@@ -100,13 +106,13 @@ Python dependencies are listed in `requirements.txt`.
 
 ### Scaling 
 Plot for grid size 100:  
-!(results/archive/results_20251125_225537/performance-plots/complete_optimization_journey.png) 
+![heatKernel](results/archive/results_20251125_225537/performance-plots/complete_optimization_journey.png) 
 
 Plot for grid size 200:  
-!(results/archive/results_20251127_223540/performance-plots/complete_optimization_journey.png) 
+![heatKernel](results/archive/results_20251127_223540/performance-plots/complete_optimization_journey.png) 
 
 Plot for grid size 500:  
-!(results/archive/results_20251127_222556/performance-plots/complete_optimization_journey.png) 
+![heatKernel](results/archive/results_20251127_222556/performance-plots/complete_optimization_journey.png) 
 
 ### 7.3 Key Observations
 - Expected large Python to C baseline acceleration.  
