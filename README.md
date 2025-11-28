@@ -1,10 +1,12 @@
 # heatKernel
 HeatKernel: Performance Engineering of a Finite Difference Stencil Kernel
 
-(results/archive/results_20251127_222556/performance_plots/complete_optimization_journey.png)
+!(results/archive/results_20251127_222556/performance_plots/complete_optimization_journey.png)
 
 ---
+
 **Updates** This project is in continuous state and more stages will be added based on my learnings
+
 ---
 
 This project benchmarks and optimizes a **2D heat equation finite-difference stencil**, a memory-bound kernel central to scientific computing and HPC microbenchmarks. The repository includes Python, C, and progressively optimized implementations.
@@ -98,13 +100,13 @@ Python dependencies are listed in `requirements.txt`.
 
 ### Scaling 
 Plot for grid size 100:  
-(results/archive/results_20251125_225537/performance-plots/complete_optimization_journey.png) 
+!(results/archive/results_20251125_225537/performance-plots/complete_optimization_journey.png) 
 
 Plot for grid size 200:  
-(results/archive/results_20251127_223540/performance-plots/complete_optimization_journey.png) 
+!(results/archive/results_20251127_223540/performance-plots/complete_optimization_journey.png) 
 
 Plot for grid size 500:  
-(results/archive/results_20251127_222556/performance-plots/complete_optimization_journey.png) 
+!(results/archive/results_20251127_222556/performance-plots/complete_optimization_journey.png) 
 
 ### 7.3 Key Observations
 - Expected large Python to C baseline acceleration.  
@@ -113,14 +115,14 @@ Plot for grid size 500:
 - OpenMP scaling approached near-ideal in placeholder tests.
 
 ## Hardware Details
-CPU: M4 ARMv9.2-A with 3nm proces tech
-Cores: 10 [4 performance (P) / 6 efficiency (E)]
-L1 cache(KB): 128 (P)/64 (E)
-L2 cache(MB): 16 (P)/4 (E)
-GPU cores: 8
-Theoritical FP32 FLOPS (TFLOPS): 4.26
-Compiler: GCC and clang  
-OS: macos  
+- CPU: M4 ARMv9.2-A with 3nm proces tech
+- Cores: 10 [4 performance (P) / 6 efficiency (E)]
+- L1 cache(KB): 128 (P)/64 (E)
+- L2 cache(MB): 16 (P)/4 (E)
+- GPU cores: 8
+- Theoritical FP32 FLOPS (TFLOPS): 4.26
+- Compiler: GCC and clang  
+- OS: macos  
 
 ## Future Work
 - 3D stencil solver
